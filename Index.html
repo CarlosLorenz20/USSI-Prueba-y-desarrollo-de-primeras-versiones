@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/EstilosIndex.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <!-- Contenedor principal de la página -->
+    <div class="banner">
+        <!-- Imagen de banner que se muestra en la parte superior de la página -->
+        <img src="Img/bannerbicentenarioMOD.jpg" alt="Banner de Salud UBV">
+    </div>
+
+    <!-- Encabezado de la página que incluye el logo y la navegación -->
+    <header class="header">
+        <img src="Img/LogoUBV1.png" alt="Logo de Salud UBV">
+        <!-- Navegación principal con enlaces a otras secciones -->
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Información</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+        </nav>
+    </header>
+
+    <!-- Sección principal que ocupa toda la altura de la ventana -->
+    <div class="home">
+        <!-- Contenido principal que incluye un título y un párrafo descriptivo -->
+        <div class="content">
+            <h2>Bienvenido a Salud UBV</h2>
+            <p>USSI Salud es una institución de salud pública ubicada en Caracas, Venezuela...</p>
+            <!-- Enlace para obtener más información o registrarse -->
+            <a href="#registro">Más Información</a>
+        </div>
+
+        <!-- Sección de inicio de sesión para usuarios -->
+        <div class="wrapper-login">
+            <h2>Iniciar Sesión</h2>
+            <!-- Contenedor para los campos de entrada del formulario -->
+            <div class="input-box">
+                <!-- Campo de entrada para el nombre de usuario -->
+                <input type="text" required>
+                <label>Nombre de Usuario</label>
+                <!-- Icono que se muestra dentro del campo de entrada -->
+                <span class="icon">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                </span>
+            </div>
+
+            <!-- Contenedor para los campos de entrada del formulario -->
+            <div class="input-box">
+                <!-- Campo de entrada para la contraseña -->
+                <input type="password" required>
+                <label>Contraseña</label>
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </span>
+            </div>
+
+            <!-- Enlaces para recordar contraseña y registro nuevo -->
+            <div class="renember-forgot">
+                <label><input type="checkbox"> Recordarme</label>
+                <a href="#olvido-contraseña">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <!-- Botón para enviar el formulario de inicio de sesión -->
+            <button class="btn">Iniciar Sesión</button>
+
+            <!-- Opción para registrarse si no se tiene cuenta -->
+            <div class="register">
+                ¿No tienes una cuenta? <a href="#registro">Regístrate aquí</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página con información adicional o enlaces importantes -->
+    <footer>
+        © 2024 Salud UBV. Todos los derechos reservados.
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

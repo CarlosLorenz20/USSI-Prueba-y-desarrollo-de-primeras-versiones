@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Importa la fuente Poppins desde Google Fonts */
+
+* {
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Cambia el modelo de caja para incluir el padding y el borde en el ancho y alto total */
+    font-family: 'Poppins', sans-serif; /* Establece la fuente Poppins como la fuente principal */
+}
+
+.banner {
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    height: 40px; /* Establece la altura de la banner */
+    width: 100%; /* Establece el ancho de la banner al 100% del contenedor padre */
+    margin-bottom: 20px; /* Agrega un margen inferior de 20px */
+}
+
+.header {
+    position: relative; /* Posiciona el encabezado de manera relativa para usar con elementos hijos posicionados absolutamente */
+    top: 0; /* Coloca el encabezado en la parte superior */
+    left: 0; /* Coloca el encabezado a la izquierda */
+    width: 100%; /* Establece el ancho del encabezado al 100% del contenedor padre */
+    padding: 1px 100px; /* Agrega un padding de 1px arriba y abajo y 100px a los lados */
+    background-color: #000000; /* Establece el color de fondo del encabezado a negro */
+    display: flex; /* Utiliza flexbox para alinear los elementos hijos */
+    justify-content: space-between; /* Distribuye espacio entre los elementos hijos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    z-index: 99; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+
+.header img {
+    width: 120px; /* Establece un ancho fijo para las imágenes en el encabezado */
+}
+
+.nav a {
+    position: relative; /* Posiciona los enlaces de navegación relativamente */
+    font-size: 1.1rem; /* Establece un tamaño de fuente para los enlaces */
+    color: #fff; /* Establece el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado del texto de los enlaces */
+    margin-left: 40px; /* Agrega un margen izquierdo de 40px entre los enlaces */
+}
+
+.nav a::after {
+    content: ''; /* Crea un pseudo-elemento vacío después del enlace */
+    position: absolute; /* Posiciona el pseudo-elemento absolutamente respecto al enlace */
+    left: 0; /* Coloca el pseudo-elemento a la izquierda del enlace */
+    bottom: -6px; /* Coloca el pseudo-elemento 6px debajo del enlace */
+    width: 100%; /* Establece el ancho del pseudo-elemento al 100% del enlace */
+    height: 3px; /* Establece la altura del pseudo-elemento a 3px */
+    background-color: #fff; /* Establece el color de fondo del pseudo-elemento a blanco */
+    border-radius: 5px; /* Aplica esquinas redondeadas al pseudo-elemento */
+    transform: scaleX(0); /* Inicialmente oculta el pseudo-elemento (escala en X a 0) */
+    transition: .5s; /* Aplica una transición suave de medio segundo para cambios en estilo */
+}
+
+.nav a:hover::after {
+    transform: scaleX(1); /* Muestra el pseudo-elemento al pasar el ratón sobre el enlace (escala en X a 1) */
+}
+
+.home {
+    position: relative; /* Posiciona la sección principal relativamente para elementos hijos posicionados absolutamente */
+    width: 100%; /* Establece el ancho de la sección principal al 100% del contenedor padre */
+    height: 100vh; /* Establece la altura de la sección principal al alto completo de la ventana gráfica */
+    background: url(../Img/Fondo1.jpg) no-repeat; /* Establece una imagen de fondo sin repetición */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo en su contenedor */
+    display: flex; /* Utiliza flexbox para alinear los elementos hijos dentro de esta sección */
+    justify-content: space-between; /* Distribuye espacio entre los elementos hijos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding: 80px 100px 0; /* Agrega un padding superior de 80px y lateral de 100px, sin padding inferior */
+}
+
+.home .content {
+    max-width: 600px; /* Establece un ancho máximo para el contenido dentro de la sección principal */
+    color: #fff; /* Establece el color del texto dentro del contenido a blanco */
+}
+
+.home .content h2 {
+    font-size: 3rem; /* Establece un tamaño grande para los encabezados dentro del contenido */
+    letter-spacing: .03em; /* Aplica un espaciado ligero entre letras en el encabezado */
+}
+
+.home .content p {
+    margin: 10px 0 40px; /* Agrega márgenes alrededor del párrafo (10px arriba, 40px abajo)*/
+}
+
+.home .content a {
+    color: #fff; /* Establece el color del texto del enlace dentro del contenido a blanco */
+    text-decoration: none; /* Elimina subrayado del texto del enlace*/
+    border: 2px solid #fff; /* Agrega un borde blanco alrededor del enlace*/
+    font-weight: 500; /* Establece un peso medio para la fuente del enlace*/
+    padding: 10px 40px; /* Agrega padding alrededor del texto dentro del enlace*/
+    border-radius: 40px; /* Aplica esquinas redondeadas al enlace*/
+    transition: .5s; /* Aplica una transición suave para cambios en estilo*/
+}
+
+.home .content a:hover {
+   background-color: #1e1e1e;/* Cambia el color de fondo cuando se pasa sobre el enlace*/
+}
+
+.home .wrapper-login {
+   position: relative;/* Posiciona este contenedor relativamente para sus hijos*/
+   width: 440px;/* Define un ancho fijo para este contenedor*/
+}
+
+.home .wrapper-login h2 {
+   font-size: 2rem;/* Define un tamaño grande para los encabezados dentro del formulario*/
+   color:#fff ;/* Establece el color del texto a blanco*/
+   text-align:center ;/* Centra el texto horizontalmente*/
+}
+
+.home .wrapper-login .input-box {
+   position:absolute ;/* Posiciona este contenedor absolutamente respecto a su padre*/
+   width :100 % ;/* Define que ocupe todo el ancho disponible*/
+   height :50 px ;/* Define una altura fija para las cajas de entrada*/
+   margin :40 px0 px ;/* Agrega márgenes verticales alrededor (40 px arriba y abajo)*/
+}
+
+.home .wrapper-login .input-box input {
+   width :100 % ;/* Define que ocupe todo el ancho disponible dentro de su contenedor*/
+   height :100 % ;/* Define que ocupe toda la altura disponible dentro de su contenedor*/
+   background :transparent ;/* Hace que el fondo sea transparente*/
+   border :1 px solid #fff ;/* Agrega un borde blanco alrededor del campo de entrada*/
+   outline :none ;/* Elimina cualquier contorno por defecto al enfocarse en este campo*/
+   border-radius :40 px ;/* Aplica esquinas redondeadas al campo de entrada*/
+   font-size :1 em ;/* Define un tamaño estándar para la fuente dentro del campo*/
+   color:#fff ;/* Establece que el texto sea blanco*/
+   padding :0 px5 px0 px45 px ;/* Agrega espacio interno (padding) dentro del campo (izquierda)*/
+}
+
+.home .wrapper-login .input-box label{
+   position:absolute ;/* Posiciona la etiqueta absolutamente respecto a su caja contenedora*/
+   top :50 % ;/* Coloca la etiqueta verticalmente centrada inicialmente (50%)*/
+   left :45 px ;/* Coloca la etiqueta ligeramente hacia la derecha (45 px) desde la izquierda*/
+   transform :translateY(-50%);/* Ajusta verticalmente la etiqueta hacia arriba para centrarla correctamente*/
+   font-size :1 em ;/* Define un tamaño estándar para la fuente de la etiqueta*/
+   color:#fff ;/* Establece que el texto sea blanco*/
+   pointer-events:none ;/* Desactiva eventos sobre esta etiqueta (no se puede seleccionar)*/
+   transition:.5 s ;/* Aplica una transición suave cuando cambie su estado o posición*/
+}
+
+.home .wrapper-login .input-box input :focus ~ label,
+.home .wrapper-login .input-box input :valid ~ label
+.input-box input :valid ~ label {
+   font-size:.8 em ;/* Reduce el tamaño de fuente cuando se enfoca o es válido (para dar efecto visual)*/
+   top:-14 px ;/* Mueve hacia arriba cuando se aplica foco o es válido (fuera del campo)*/
+   left :17 px ;/* Mueve ligeramente hacia adentro desde la izquierda cuando se aplica foco o es válido (fuera del campo)*/ 
+}
+
+.home .wrapper-login .input-box .icon {
+   position:absolute ;/* Posiciona este icono absolutamente dentro de su caja contenedora*/ 
+   top :14 px ;/* Coloca verticalmente en una posición específica desde arriba (14 px)*/ 
+   left :15 px ;/* Coloca horizontalmente en una posición específica desde la izquierda (15 px)*/ 
+   font-size :1.5 em ;/* Define un tamaño grande para este icono*/ 
+   color:#fff ;/* Establece que este icono sea blanco*/ 
+}
+
+.home .wrapper-login .renember-forgot {
+   font-size:.9 em ;/* Define un tamaño estándar para esta sección que recuerda o olvida contraseña*/ 
+   color:#fff ;/* Establece que todo este texto sea blanco*/ 
+   margin:-25 px0 px15 px ;/* Agrega márgenes negativos y positivos alrededor (25 px arriba y abajo y 15 px laterales)*/ 
+   display:flex ;/* Utiliza flexbox para distribuir sus elementos internos*/ 
+   justify-content :space-between ;/* Distribuye espacio entre sus elementos internos horizontalmente*/ 
+}
+
+.home .wrapper-login .renember-forgot label{
+   accent-color:#1e1e1e ;/* Define un color acentuado específico para esta etiqueta*/ 
+   margin-right :3 px ;/* Agrega margen derecho entre esta etiqueta y otros elementos*/ 
+}
+
+.home .wrapper-login .renember-forgot a {
+   color:#fff ;/* Establece que los enlaces sean blancos*/ 
+   text-decoration:none ;/* Elimina subrayado en estos enlaces*/ 
+}
+
+.home .wrapper-login .renember-forgot a:hover {
+     text-decoration :underline ;/* Aplica subrayado cuando se pasa sobre estos enlaces con hover */ 
+}
+
+.home .wrapper-login .btn {
+     width :100 % ;/* Define que este botón ocupe todo el ancho disponible */ 
+     height :50 px ;/* Define una altura fija para este botón */ 
+     border:none ;/* Elimina bordes por defecto */ 
+     outline:none ;/* Elimina cualquier contorno por defecto */ 
+     border-radius :40 px ;/* Aplica esquinas redondeadas al botón */ 
+     background :linear-gradient(90 deg,#1e1e1e0 %,#0a0a00 %);/* Aplica un degradado como fondo */ 
+     box-shadow :08 px10 px rgba(0 ,0 ,0 ,0.5);/** Aplica sombra al botón */ 
+     cursor:pointer ;/** Cambia cursor a puntero cuando está sobre este botón */ 
+     font-size :1.5 em ;/** Define un tamaño grande para la fuente dentro del botón */ 
+     color:#fff ;/** Establece que todo texto dentro sea blanco */ 
+     font-weight :500 ;/** Define peso medio en fuente */ 
+}
+
+.home .wrapper-login .register {
+     font-size:.9 em ;/** Define tamaño estándar para esta sección que invita a registrarse */ 
+     color:#fff ;/** Establece que todo texto dentro sea blanco */ 
+     text-align:center ;/** Centra horizontalmente todo texto dentro */ 
+     margin :30 px0 px ;/** Agrega márgenes verticales alrededor (30 px arriba y abajo) */ 
+}
+
+.home .wrapper-login .register a {  
+      color:#fff ;/** Establece que los enlaces sean blancos */  
+      text-decoration:none ;/** Elimina subrayado en estos enlaces */  
+      font-weight :600 ;/** Define peso medio-alto en fuente */  
+} 
+
+.home .wrapper-login .register a:hover {  
+      text-decoration :underline ;/** Aplica subrayado cuando se pasa sobre estos enlaces */  
+}
